@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <layout-header sitename="Fullstack Development 2020"></layout-header>
+    <layout-main></layout-main>
+    <layout-footer></layout-footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LayoutHeader from './components/LayoutHeader.vue'
+import LayoutMain from './components/LayoutMain.vue'
+import LayoutFooter from './components/LayoutFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    LayoutHeader,
+    LayoutMain,
+    LayoutFooter
+  },
 }
 </script>
 
 <style>
+* {
+  padding: 0rem;
+  margin: 0rem;
+  font-family: 'Courier New', Courier, monospace;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 </style>
